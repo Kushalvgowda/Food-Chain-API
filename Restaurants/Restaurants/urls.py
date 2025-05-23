@@ -31,7 +31,6 @@ schema_view = get_schema_view(
     ),
     public=True,
     permission_classes=[permissions.AllowAny],
-    url="https://food-chain-api.onrender.com",
     # authentication_classes=[],
 )
 

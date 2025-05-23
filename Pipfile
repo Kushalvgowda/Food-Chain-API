@@ -17,7 +17,6 @@ drf-spectacular = "*"
 waitress = "*"
 dj-database-url = "*"
 whitenoise = "*"
-django-cors-headers = "*"
 
 [dev-packages]
 

@@ -14,7 +14,6 @@ import os
 from dotenv import load_dotenv
 import dj_database_url
 from pathlib import Path
-from corsheaders.defaults import default_headers
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -61,7 +60,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -156,15 +154,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    "https://food-chain-api.onrender.com",
-]
-
-CORS_ALLOW_HEADERS = list(default_headers) + [
-    "Authorization",
-    "Content-Type",
-]
-
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
@@ -189,7 +178,7 @@ REST_FRAMEWORK = {
     ],
 
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '2/minute',
+        'anon': '4/minute',
         'user': '10/minute',
         # 'ten': '10/minute',
     },
@@ -212,6 +201,3 @@ DJOSER = {
 #     'USE_SESSION_AUTH': False,  
 # }
 
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
