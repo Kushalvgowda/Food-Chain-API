@@ -14,7 +14,7 @@ python-dotenv = "*"
 psycopg2 = "*"
 drf-yasg = "*"
 drf-spectacular = "*"
-gunicorn = "*"
+waitress = "*"
 
 [dev-packages]
 
