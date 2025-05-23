@@ -14,6 +14,7 @@ import os
 from dotenv import load_dotenv
 import dj_database_url
 from pathlib import Path
+from corsheaders.defaults import default_headers
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -159,6 +160,11 @@ CORS_ALLOWED_ORIGINS = [
     "https://food-chain-api.onrender.com",
 ]
 
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "Authorization",
+    "Content-Type",
+]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
@@ -205,3 +211,7 @@ DJOSER = {
 #     },
 #     'USE_SESSION_AUTH': False,  
 # }
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
