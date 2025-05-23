@@ -15,6 +15,7 @@ psycopg2 = "*"
 drf-yasg = "*"
 drf-spectacular = "*"
 waitress = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
