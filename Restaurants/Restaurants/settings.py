@@ -27,7 +27,16 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    ".railway.app"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.railway.app"
+]
+
+if DEBUG:
+    ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -47,7 +56,6 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'drf_yasg',
-    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
