@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+djangorestframework-xml = "*"
+djoser = "*"
+bleach = "*"
+django-filter = "*"
+python-dotenv = "*"
+psycopg2 = "*"
+drf-yasg = "*"
+drf-spectacular = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
