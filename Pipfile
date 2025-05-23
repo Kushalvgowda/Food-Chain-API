@@ -16,6 +16,7 @@ drf-yasg = "*"
 drf-spectacular = "*"
 waitress = "*"
 dj-database-url = "*"
+whitenoise = "*"
 
 [dev-packages]
 
